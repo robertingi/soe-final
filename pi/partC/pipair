@@ -1,0 +1,3 @@
+#!/bin/bash
+DIR="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+opt -disable-inlining -disable-opt -print-callgraph 2>&1 >/dev/null $1 | $DIR/main $2 $3 $4
